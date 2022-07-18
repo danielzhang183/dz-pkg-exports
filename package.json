@@ -1,0 +1,68 @@
+{
+  "name": "dz-pkg-exports",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.2.1",
+  "description": "",
+  "author": "Dylan Zhang <danielzhang183@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/danielzhang183/dz-pkg-exports#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielzhang183/dz-pkg-exports.git"
+  },
+  "bugs": "https://github.com/antfu/dz-pkg-exports/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "mlly": "^0.5.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@antfu/ni": "^0.17.2",
+    "@antfu/utils": "^0.5.2",
+    "@types/node": "^18.0.6",
+    "axios": "^0.27.2",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.20.0",
+    "esno": "^0.16.3",
+    "pnpm": "^7.5.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4",
+    "vite": "^3.0.1",
+    "vitest": "^0.18.1",
+    "vue": "^3.2.37"
+  }
+}
