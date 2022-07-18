@@ -1,10 +1,10 @@
 import { resolve as resolvePackagePath } from 'mlly'
 import { describe, expect, it } from 'vitest'
-import { getExports } from '../dist'
+import { getExportsRuntime } from '../dist'
 
 describe('ESM', () => {
   it('@antfu/utils', async () => {
-    expect((await getExports('@antfu/utils')).slice(0, 5))
+    expect((await getExportsRuntime('@antfu/utils')).slice(0, 5))
       .toMatchInlineSnapshot(`
         [
           "assert",
@@ -19,7 +19,7 @@ describe('ESM', () => {
 
 describe('CJS', () => {
   it('axios', async () => {
-    expect((await getExports('axios')).slice(0, 5))
+    expect((await getExportsRuntime('axios')).slice(0, 5))
       .toMatchInlineSnapshot(`
         [
           "request",
@@ -32,7 +32,7 @@ describe('CJS', () => {
   })
 
   it('@vue/shared', async () => {
-    expect((await getExports('@vue/shared', {
+    expect((await getExportsRuntime('@vue/shared', {
       url: await resolvePackagePath('vue'),
     })).slice(0, 5))
       .toMatchInlineSnapshot(`
