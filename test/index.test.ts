@@ -1,3 +1,4 @@
+import { resolve as resolvePackagePath } from 'mlly'
 import { describe, expect, it } from 'vitest'
 import { getExports } from '../src'
 
@@ -30,15 +31,17 @@ describe('CJS', () => {
       `)
   })
 
-  it('@vue/reactivity', async () => {
-    expect((await getExports('@vue/reactivity')).slice(0, 5))
+  it('@vue/shared', async () => {
+    expect((await getExports('@vue/shared', {
+      url: await resolvePackagePath('vue'),
+    })).slice(0, 5))
       .toMatchInlineSnapshot(`
         [
-          "assert",
-          "at",
-          "batchInvoke",
-          "clamp",
-          "clampArrayRange",
+          "EMPTY_ARR",
+          "EMPTY_OBJ",
+          "NO",
+          "NOOP",
+          "PatchFlagNames",
         ]
       `)
   })
