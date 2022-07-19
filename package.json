@@ -46,6 +46,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "local-pkg": "^0.4.2",
     "mlly": "^0.5.4",
     "tinypool": "^0.2.4",
     "tsup": "^6.1.3"
