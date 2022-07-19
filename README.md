@@ -4,4 +4,4 @@
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE) License © 2022 [Dylan Zhang](https://github.com/danielzhang183)
