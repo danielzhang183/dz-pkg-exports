@@ -23,7 +23,7 @@ export async function getExportsStatic(name: string, options?: GetExportsOptions
   }
 
   async function getExportsRelative(relative: string, importer?: string): Promise<string[]> {
-    const url = relative.match(/^[@a-z]/)
+    const url = relative.match(/^[@a-z0-9]/)
       ? await resolvePackagePathEntry(relative, importer)
       : new URL(relative, importer).href
 
