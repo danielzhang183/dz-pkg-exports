@@ -1,7 +1,7 @@
 {
   "name": "dz-pkg-exports",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Dylan Zhang <danielzhang183@gmail.com>",
