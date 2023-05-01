@@ -1,17 +1,15 @@
 {
   "name": "dz-pkg-exports",
   "type": "module",
-  "version": "0.0.2",
-  "packageManager": "pnpm@7.2.1",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.3.1",
   "description": "",
-  "author": "Dylan Zhang <danielzhang183@gmail.com>",
+  "author": "Dylan Zhang",
   "license": "MIT",
-  "homepage": "https://github.com/danielzhang183/dz-pkg-exports#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielzhang183/dz-pkg-exports.git"
   },
-  "bugs": "https://github.com/antfu/dz-pkg-exports/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -46,25 +44,25 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "local-pkg": "^0.4.2",
-    "mlly": "^0.5.4",
+    "local-pkg": "^0.4.3",
+    "mlly": "^0.5.17",
     "tinypool": "^0.2.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@antfu/ni": "^0.17.2",
     "@antfu/utils": "^0.5.2",
-    "@types/node": "^18.0.6",
+    "@types/node": "^18.16.3",
     "axios": "^0.27.2",
     "bumpp": "^8.2.1",
-    "eslint": "^8.20.0",
+    "eslint": "^8.39.0",
     "esno": "^0.16.3",
-    "pnpm": "^7.5.2",
+    "pnpm": "^8.3.1",
     "rimraf": "^3.0.2",
-    "tsup": "^6.1.3",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.1",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5",
+    "vite": "^3.2.6",
     "vitest": "^0.18.1",
-    "vue": "^3.2.37"
+    "vue": "^3.2.47"
   }
 }
